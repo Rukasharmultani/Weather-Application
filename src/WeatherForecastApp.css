@@ -1,0 +1,38 @@
+/* Background for Weather-Themed App */
+body {
+    background: linear-gradient(to bottom, #87cefa, #ffffff);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search Input Animation */
+.search-input {
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+    outline: none;
+}
+
+/* Search Button Animation */
+.search-btn {
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Card Styling */
+.card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

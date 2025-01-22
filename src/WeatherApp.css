@@ -52,8 +52,9 @@ body {
 }
 
 .weather-icon {
-    height: 120px;
-    margin: 10px 0;
+    height: 200px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .search-input {

@@ -82,50 +82,61 @@ const WeatherApp = () => {
 
             {weatherData && (
                 <div id="weather-info" className="row">
-                    <div className="col-md-4 mb-4">
-                        <div className="card p-3 pop-card">
-                            <h4 className="card-title">📍 Location Information</h4>
-                            <p><strong>🌍 Location:</strong> {weatherData.location.name}</p>
-                            <p><strong>🏞️ Region:</strong> {weatherData.location.region}</p>
-                            <p><strong>🏞️ Country:</strong> {weatherData.location.country}</p>
-                            <p><strong>📏 Latitude:</strong> {weatherData.location.lat}</p>
-                            <p><strong>📏 Longitude:</strong> {weatherData.location.lon}</p>
-                            <p><strong>🕒 Time Zone:</strong> {weatherData.location.tz_id}</p>
+                    <div className="row mb-4">
+                        <div className="col-md-12">
+                            <div className="card p-3 pop-card text-center">
+                                <h4 className="card-title">📍 Location Information</h4>
+                                <p><strong>🌍 Location:</strong> {weatherData.location.name}</p>
+                                <p><strong>🏞️ Region:</strong> {weatherData.location.region}</p>
+                                <p><strong>🏞️ Country:</strong> {weatherData.location.country}</p>
+                                <p><strong>📏 Latitude:</strong> {weatherData.location.lat}</p>
+                                <p><strong>📏 Longitude:</strong> {weatherData.location.lon}</p>
+                                <p><strong>🕒 Time Zone:</strong> {weatherData.location.tz_id}</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="col-md-4 mb-4">
-                        <div className="card p-3 pop-card">
-                            <h4 className="card-title">🌡️ Current Weather</h4>
-                            <p><strong>🕒 Last Updated:</strong> {weatherData.current.last_updated}</p>
-                            <p><strong>🌡️ Temperature:</strong> {weatherData.current.temp_c}°C / {weatherData.current.temp_f}°F</p>
-                            <p><strong>🌬️ Feels Like:</strong> {weatherData.current.feelslike_c}°C / {weatherData.current.feelslike_f}°F</p>
-                            <p><strong>💨 Wind Speed:</strong> {weatherData.current.wind_kph} kph</p>
-                            <p><strong>🧭 Wind Direction:</strong> {weatherData.current.wind_dir}</p>
-                            <p><strong>💧 Humidity:</strong> {weatherData.current.humidity}%</p>
-                            <p><strong>☁️ Cloud Cover:</strong> {weatherData.current.cloud}%</p>
+                    <div className="row mb-4">
+                        <div className="col-md-12">
+                            <div className="card p-3 pop-card text-center">
+                                <h4 className="card-title">🌡️ Current Weather</h4>
+                                <p><strong>🕒 Last Updated:</strong> {weatherData.current.last_updated}</p>
+                                <p><strong>🌡️ Temperature:</strong> {weatherData.current.temp_c}°C / {weatherData.current.temp_f}°F</p>
+                                <p><strong>🌬️ Feels Like:</strong> {weatherData.current.feelslike_c}°C / {weatherData.current.feelslike_f}°F</p>
+                                <p><strong>💨 Wind Speed:</strong> {weatherData.current.wind_kph} kph</p>
+                                <p><strong>🧭 Wind Direction:</strong> {weatherData.current.wind_dir}</p>
+                                <p><strong>💧 Humidity:</strong> {weatherData.current.humidity}%</p>
+                                <p><strong>☁️ Cloud Cover:</strong> {weatherData.current.cloud}%</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="col-md-4 mb-4">
-                        <div className="card p-3 pop-card text-center">
-                            <h4 className="card-title">🌈 Weather Condition</h4>
-                            <p>{weatherData.current.condition.text}</p>
-                            <img
-                                src={weatherData.current.condition.icon}
-                                alt="Weather Icon"
-                                className="weather-icon"
-                                style={{height:"240px"}}
-                            />
-                        </div>
-                    </div>
+                    <div className="row mb-4">
+    <div className="col-md-12">
+        <div className="card p-3 pop-card text-center">
+            <h4 className="card-title">🌈 Weather Condition</h4>
+            <p>{weatherData.current.condition.text}</p>
+            <img
+                src={weatherData.current.condition.icon}
+                alt="Weather Icon"
+                style={{
+                    width: "100px",
+                    height: "100px",
+                    objectFit: "contain",
+                    margin: "10px auto",
+                }}
+            />
+        </div>
+    </div>
+</div>
+
                 </div>
             )}
 
             {astronomyData && (
-                <div className="row">
+                <div className="row mb-4">
                     <div className="col-md-12">
-                        <div className="card p-3 pop-card">
+                        <div className="card p-3 pop-card text-center">
                             <h4 className="card-title">🌌 Astronomy Details</h4>
                             <p><strong>🌅 Sunrise:</strong> {astronomyData.astro.sunrise}</p>
                             <p><strong>🌇 Sunset:</strong> {astronomyData.astro.sunset}</p>
